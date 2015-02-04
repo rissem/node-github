@@ -138,7 +138,7 @@
             "state": {
                 "type": "String",
                 "required": false,
-                "validation": "^(open|closed)$",
+                "validation": "^(open|closed|active)$",
                 "invalidmsg": "open, closed, default: open",
                 "description": ""
             },
@@ -3143,6 +3143,15 @@
             "method": "DELETE",
             "params": {
                 "$id": null
+            }
+        },
+
+        "edit-organization-membership": {
+            "url": "/user/memberships/orgs/:org",
+            "method": "PATCH",
+            "params": {
+              "$org": null,
+              "$state": null
             }
         }
     },
